@@ -4,71 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind</title>
+    <title>Education</title>
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-900 text-gray-400 w-screen ">
-    <nav class="bg-gray-800 flex justify-between font-mono w-screen">
-        <img src="logo-removebg-preview.png " class="w-32 ml-11" alt="">
-        <ul class="flex mr-11 pt-8 ml-10">
+    <nav class="bg-gray-800 flex justify-between  text-lg font-bold w-screen ">
+        <a href="index.html"><img src="logo-removebg-preview.png "
+                class="w-32 ml-11 rounded-full hover:shadow-lg hover:shadow-gray-500" alt=""></a>
+        <ul class="flex mr-11 pt-8 ml-10 max-[425px]:block max-[425px]:text-[8px] max-[425px]:pt-0 ">
             <a href="index.html">
-                <li class="mx-4 p-5 cursor-pointer">Home</li>
+                <li class="max-[425px]:p-0  mx-4 p-5 cursor-pointer">Home</li>
             </a>
             <a href="about.html">
-                <li class="mx-4 p-5 cursor-pointer">About</li>
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">About</li>
             </a>
-            <a href="education.html"><li class="mx-4 p-5 cursor-pointer">Education</li></a>
-            <li class="mx-4 p-5 cursor-pointer">Skills</li>
-            <li class="mx-4 p-5 cursor-pointer">Projects</li>
-            <li class="mx-4 p-5 cursor-pointer">Contact</li>
+            <a href="education.html">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Education</li>
+            </a>
+            <a href="skills.html">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Skills</li>
+            </a>
+            <a href="Projects.html ">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Projects</li>
+            </a>
+            <a href="contact.html">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Contact</li>
+            </a>
         </ul>
     </nav>
 
     <main class="flex flex-col justify-center align-middle   w-screen my-12 ">
         <div class="edu flex justify-around">
-        <h1 class="text-6xl font-extrabold uppercase ">my education
-            <hr class="w-4/5 ml-12 my-6 border-stone-50 border-2 rounded-full">
-        </h1>
+            <h1 class="text-6xl font-extrabold uppercase max-[425px]:text-4xl">my education
+                <hr class="w-4/5 ml-12 my-6 border-stone-50 border-2 rounded-full max-[425px]:w-2/3 ">
+            </h1>
         </div>
 
-        <div class="matriculation my-12 bg-gray-700 w-3/4  h-40">
+
+
+        <div class="flex justify-center">
+            <div
+                class="my-12 bg-gray-700 w-7/12   ml-0 flex justify-around max-[425px]:ml-8 max-[425px]: max-[425px]:flex-col text-wrap rounded-lg max-[425px]:w-4/5">
+                <img src="ssuet.jpg"
+                    class="max-[425px]: my-8   max-[425px]:w-36 max-[425px]:h-36 max-[425px]:mx-24 max-[425px]:mb-0">
+
+                <div class="text-center my-12 ">
+                    <h1 class="font-bold text-center text-3xl text-gray-200 my-7 max-[425px]:text-lg max-[425px]:">
+                        Bachelours
+                    </h1>
+                    <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-5   "> Bachelours of Science in Software
+                        Engineering </h1>
+                    <h1 class="font-medium text-gray-300 max-[425px]:text-sm "> Sir Syed University Of Engineering and
+                        Technology </h1>
+                    <h1 class="font-medium text-gray-400 max-[425px]:text-sm max-[425px]:my-4">(2022 - Present)</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+        <div
+            class="my-12 bg-gray-700 w-7/12  flex justify-around max-[425px]:ml-8 max-[425px]: max-[425px]:flex-col text-wrap rounded-lg max-[425px]:w-4/5">
+            <img src="formen.png"
+                class="rounded-full w-48 h-48 max-[425px]: my-8 max-[425px]:w-36 max-[425px]:h-36 max-[425px]:mx-24 max-[425px]:mb-0">
+
+            <div class="text-center my-12 ">
+                <h1 class="font-bold text-center text-3xl text-gray-200 my-7 max-[425px]:text-lg max-[425px]:">
+                    Intermediate</h1>
+                <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-5   "> HSC in Computer Science </h1>
+                <h1 class="font-medium text-gray-300 max-[425px]:text-sm "> Government College Formen Nazimabad no.2
+                </h1>
+                <h1 class="font-medium text-gray-400 max-[425px]:text-sm max-[425px]:my-4">(2020 - 2022)</h1>
+            </div>
+        </div>
 
         </div>
-    </main> 
-    
+
+        <div class="flex justify-center">
+        <div
+            class="my-12 bg-gray-700 w-7/12  flex justify-around max-[425px]:ml-8 max-[425px]: max-[425px]:flex-col text-wrap rounded-lg max-[425px]:w-4/5">
+            <img src="sm.png"
+                class="mr-28 w-48 h-48 rounded-full max-[425px]: my-8 max-[425px]:w-36 max-[425px]:h-36 max-[425px]:mx-24 max-[425px]:mb-0">
+
+            <div class="text-center my-12 mr-20 max-[425px]:mr-0">
+                <h1 class="font-bold text-center text-3xl text-gray-200 my-7 max-[425px]:text-lg max-[425px]:">
+                    Matriculation</h1>
+                <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-5   "> SSC in Computer Science </h1>
+                <h1 class="font-medium text-gray-300 max-[425px]:text-sm "> S.M Public Academy Campus 4 </h1>
+                <h1 class="font-medium text-gray-400 max-[425px]:text-sm max-[425px]:my-4">(2018-2020)</h1>
+            </div>
+        </div>
+
+    </div>
+    </main>
+
 </body>
 
 
-<footer class="bg-gray-800 text-gray-400 flex h-1/4 justify-center">
+<footer class="bg-gray-800 text-gray-400 flex h-1/4 justify-center max-[425px]:w-screen">
     <div class="logo">
-        <img src="logo-removebg-preview.png" class="w-32 ml-11 " alt="">
+
+        <img src="logo-removebg-preview.png" class="w-28 ml-0 max-[425px]:w-20 max-[425px]:ml-0" alt="">
         <button
-            class="ml-11 font-serif bg-gray-400 text-gray-800 p-3 rounded-full w-32 hover:bg-gray-950 hover:text-gray-400">Contact</button>
+            class="ml-0 font-serif bg-gray-400 text-gray-800 p-3 rounded-full w-32 hover:bg-gray-950 hover:text-gray-400 max-[425px]:text-[8px] max-[425px]:w-16 max-[425px]:ml-3">
+            Contact</button>
+        <h1 class="my-8 text-[12px] text-wrap text-end max-[425px]:text-[8px]">Copyright &copy All rights reserved 2024
+        </h1>
     </div>
 
     <div class="fnav text-xs flex">
-        <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5">
+        <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5 max-[425px]:ml-2">
         <nav>
-            <ul class="mr-16 w-8 pt-5 pb-5 ml-0 ">
-                <li class="mx-20 p-1 cursor-pointer">Home</li>
-                <li class="mx-20 p-1 cursor-pointer">About</li>
-                <li class="mx-20 p-1 cursor-pointer">Education</li>
-                <li class="mx-20 p-1 cursor-pointer">Skills</li>
-                <li class="mx-20 p-1 cursor-pointer">Projects</li>
-                <li class="mx-20 p-1 cursor-pointer">Contact</li>
+            <ul class="mr-16 w-8 pt-10 pb-5 ml-0 max-[425px]:text-[8px] max-[425px]:pt-5">
+                <a href="index.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Home</li>
+                </a>
+                <a href="about.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">About</li>
+                </a>
+                <a href="education.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Education</li>
+                </a>
+                <a href="skills.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Skills</li>
+                </a>
+                <a href="Projects.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Projects</li>
+                </a>
+                <a href="contact.html">
+                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Contact</li>
+                </a>
             </ul>
         </nav>
-        <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5">
+        <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5 max-[425px]:ml-2">
 
 
-        <div class="socials ml-28 mt-5">
+        <div class="socials ml-28 mt-8 max-[425px]:ml-10 max-[425px]:mt-5">
+
             <img src="icons8-instagram-32.png" class="mt-1" alt="">
             <img src="icons8-linkedin-32.png" class="mt-1" alt="">
             <img src="icons8-github-32.png" class="mt-1" alt="">
             <img src="icons8-email-32.png" class="mt-1" alt="">
         </div>
+
+
+
+
     </div>
 
 </footer>
