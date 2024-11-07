@@ -5,57 +5,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hassan's Portfolio</title>
+    <link rel="shortcut icon" href="Hassan Abbas.png" type="image/x-icon">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-900 text-gray-400 w-screen max-[425px]:w-screen">
-    <nav class="bg-gray-800 flex justify-between  text-lg font-bold w-screen ">
-        <a href="index.html"><img src="logo-removebg-preview.png " class="w-32 ml-11 rounded-full hover:shadow-lg hover:shadow-gray-500" alt=""></a>
-        <ul class="flex mr-11 pt-8 ml-10 max-[425px]:block max-[425px]:text-[8px] max-[425px]:pt-0 ">
-            <a href="index.html">
+<body class="bg-gray-900 text-gray-400 w-full max-[425px]:w-screen">
+    <nav id="navbar" class="bg-gray-900 flex justify-around  text-lg font-bold w-screen fixed">
+        <a><img src="logo-removebg-preview.png " class="w-16 m-3 md:size-32 md:my-auto ml-0 rounded-full " alt=""></a>
+        <button id="menu-toggle" class="text-white block lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+
+         
+        <ul class=" hidden md:flex mr-11 pt-5 ml-10  max-[425px]:text-[8px] max-[425px]:pt-0 ">
+            <a id="home_nav">
                 <li class="max-[425px]:p-0  mx-4 p-5 cursor-pointer">Home</li>
             </a>
-            <a href="about.html">
+            <a id="about_nav">
                 <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">About</li>
             </a>
-            <a href="education.html">
+            <a id="education_nav">
                 <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Education</li>
             </a>
-            <a href="skills.html"><li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Skills</li></a>
-            <a href="Projects.html "><li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Projects</li></a>
-            <a href="contact.html"><li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Contact</li></a>
-        </ul>
+            <a id="skills_nav">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Skills</li>
+            </a>
+            <a id="projects_nav">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Projects</li>
+            </a>
+            <a id="contact_nav">
+                <li class="max-[425px]:p-0 mx-4 p-5 cursor-pointer">Contact</li>
+            </a>
+        </ul> 
     </nav>
 
-    <main class="flex justify-around w-screen my-12 max-[425px]:block max-[425px]:w-full">
-        <img src="PXL_20231122_165021972~2.jpg" class="w-3/4 rounded-3xl ml-10 min-[426px]:hidden" alt="">
-        <div class="Intro w-2/5 my-32 max-[425px]:w-full max-[425px]:my-10 ">
-            <h1 class="text-2xl font-extrabold w-full uppercase  text-center max-[425px]:text-xl">Syed Muhammad Hassan
+    
+    <main id="home_sec" class="flex justify-around w-screen  max-[425px]:block max-[425px]:w-full">
+        <img src="PXL_20231122_165021972~2.jpg" class="w-32 pt-32  rounded-md mx-auto md:hidden" alt="">
+        <div class="Intro w-2/5 my-32 max-[425px]:w-full md:pt-20 max-[425px]:my-10 ">
+            <h1 class="text-2xl font-extrabold w-full uppercase my-auto text-center max-[425px]:text-xl">Syed Muhammad
+                Hassan
                 Abbas Naqvi</h1>
-            <hr class="w-[70%] ml-28 my-6 border-stone-50 border-2 rounded-full max-[425px]:ml-12">
-            <p class="text-center">I am a dedicated software engineer with great interest to front-end development,
+            <hr class=" md:w-full w-4/5 mx-auto  my-6 border-stone-50 border-2 rounded-full ">
+            <p class="text-center my-auto">I am a dedicated software engineer with great interest to front-end
+                development,
                 currently doing BS from
                 Software Engineering I specialize in front end development and I create beautifully designed, responsive
                 websites using HTML, CSS, Tailwind &
                 Javascript.</p>
 
             <div class="flex justify-center  max-[425px]: ml-0">
-                <a href="about.html"><button
+                <a id="aboutbutton"><button
                         class="bg-gray-800 p-5 m-10 rounded-full px-11 hover:bg-gray-400 hover:text-gray-800 max-[425px]:text-sm max-[425px]:mr-3">About
                         me</button></a>
-                <a href="contact.html"><button
+                <a id="contactbutton"><button
                         class="bg-gray-800 p-5 m-10 rounded-full px-11 hover:bg-gray-400 hover:text-gray-800 max-[425px]:ml-3 max-[425px]:text-sm">Contact</button></a>
             </div>
         </div>
 
 
 
-        <img src="PXL_20231122_165021972~2.jpg" class="w-1/5 rounded-3xl max-[425px]:hidden" alt="">
+        <img src="PXL_20231122_165021972~2.jpg" class="w-1/5 pt-36 h-1/3 rounded-3xl max-[425px]:hidden" alt="">
 
 
     </main>
 
+    <main id="about_sec" class="flex justify-around w-screen  max-[425px]:block">
+
+
+
+        <img src="IMG_20220714_134319_504.jpg"
+            class="w-4/12 rounded-3xl h-[10%] py-16 mt-16 max-[425px]:w-full max-[425px]:mt-6 max-[425px]:rounded-full"
+            alt="">
+
+
+        <div class="Intro w-2/5 justify-center my-auto max-[425px]:w-screen max-[425px]:my-12 text-center  ">
+            <h1 class="text-5xl font-extrabold w-full uppercase justify-center flex">About me</h1>
+            <hr class="w-4/5 mx-auto my-6 border-stone-50 border-2 rounded-full max-[425px]:mx-auto ">
+            <p class="max-[425px]:text-sm">My name is Syed Muhammad Hassan Abbas, a committed software engineer and I
+                bleed to feel front-end on
+                fingertips. Currently I am a student at Sir Syed University of Engineering and Technology, Karachi where
+                i joined Software engineering. Building good looking and user-friendly web interfaces with HTML,
+                Tailwind CSS,
+                JavaScript are my main skills. This skill also makes me good at backend development using languages like
+                Java and Python, which lets me make complete end-to-end applications. I hope to use my technical and
+                creative skill sets to build innovative software solutions that will facilitate greater positive social
+                impact.</p>
+
+            <a href="Resume Hassan.pdf"><button
+                    class="bg-gray-800 p-5 m-10 ml-18 rounded-full px-11 hover:bg-gray-400 hover:text-gray-800 max-[425px]:ml-10">My
+                    Resume</button></a>
+        </div>
+    </main>
+
+    <main id="education_sec" class="flex flex-col md:flex-row justify-around align-middle py-32 w-screen ">
+        <div class="edu flex justify-around">
+            <h1 class="text-4xl my-auto font-extrabold uppercase ">my education
+                <hr class="w-full mx-auto my-6 border-stone-50 border-2 rounded-full max-[425px]:w-4/5 ">
+            </h1>
+        </div>
+
+        <div class="block">
+            <div class="flex justify-center md:justify-between">
+                <div
+                    class=" bg-gray-700 w-auto md:flex-row p-4 flex  justify-around  flex-col-reverse text-wrap rounded-lg max-[425px]:w-4/5">
+
+                    <div class="text-center md:my-auto my-12 mr-20 max-[425px]:mr-0">
+                        <h1 class="font-bold text-center md:text-xl text-gray-200  text-lg">
+                            Matriculation</h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-1 md:text-xs  "> SSC in Computer
+                            Science </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> S.M Public Academy </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> Campus 4 </h1>
+                        <h1 class="font-medium text-gray-400 max-[425px]:text-sm md:text-xs max-[425px]:my-4">
+                            (2018-2020)</h1>
+                    </div>
+
+                    <div class="justify-center flex">
+                        <img src="sm.png"
+                            class=" md:size-20 rounded-full max-[425px]: my-auto w-36 h-36  max-[425px]:mb-0">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="flex justify-center">
+                <div
+                    class="my-12 bg-gray-700 w-auto  p-4 md:flex-row md:space-x-16 flex   justify-around  flex-col-reverse text-wrap rounded-lg max-[425px]:w-4/5">
+
+                    <div class="text-center ">
+                        <h1 class="font-bold text-center md:text-xl text-gray-200  text-lg ">
+                            Intermediate</h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-1 md:text-xs  "> HSC in Computer
+                            Science </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> Government College Formen
+                        </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> Nazimabad
+                            no.2
+                        </h1>
+                        <h1 class="font-medium text-gray-400 max-[425px]:text-sm max-[425px]:my-4 md:text-xs">(2020 -
+                            2022)</h1>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <img src="formen.png"
+                            class="md:size-20 rounded-full max-[425px]: my-auto w-36 h-36  max-[425px]:mb-0">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center">
+                <div
+                    class=" bg-gray-700 w-auto  p-4 md:flex-row  md:space-x-16 flex   justify-around  flex-col-reverse  text-wrap rounded-lg max-[425px]:w-4/5">
+
+                    <div class="text-center">
+                        <h1 class="font-bold text-center md:text-xl text-gray-200 text-lg max-[425px]:">
+                            Bachelours
+                        </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm my-1   md:text-xs"> BSc in
+                            Software
+                            Engineering </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> Sir Syed University Of
+                        </h1>
+                        <h1 class="font-medium text-gray-300 max-[425px]:text-sm md:text-xs"> Engineering and Technology
+                        </h1>
+                        <h1 class="font-medium text-gray-400 max-[425px]:text-sm md:text-xs max-[425px]:my-4">(2022 -
+                            Present)</h1>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <img src="ssuet.jpeg"
+                            class="md:size-20 rounded-full max-[425px]: my-auto w-36 h-36  max-[425px]:mb-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <main id="skills_sec"
+        class="flex justify-center flex-col pt-12 w-screen  max-[425px]:block max-[425px]:w-full max-[425px]:my-20 ">
+
+
+        <div class="w-4/5 mx-48 my-20 flex justify-around max-[425px]:w-screen max-[425px]:mx-0">
+            <a href="https://www.w3schools.com/html/html_intro.asp"><img src="html.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://www.w3schools.com/css/css_intro.asp"><img src="css.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://tailwindcss.com/docs/installation"><img src="tailwind.jpg"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://www.w3schools.com/js/default.asp"><img src="js.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+
+        </div>
+
+        <div class="my-6 edu flex justify-around">
+            <h1 class="text-4xl text-center font-extrabold uppercase  max-[425px]:text-center max-[425px]:w-screen ">
+                my
+                expertise
+                <hr
+                    class="w-full ml-0 my-6 border-stone-50 border-2 rounded-full max-[425px]:w-4/5 max-[425px]:mx-auto ">
+            </h1>
+        </div>
+
+        <div class="w-4/5 mx-48 my-20 flex justify-around max-[425px]:w-screen max-[425px]:mx-0">
+            <a href="https://www.w3schools.com/python/default.asp"><img src="python.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://www.w3schools.com/java/java_intro.asp"><img src="java.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://www.w3schools.com/c/index.php"><img src="c.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+            <a href="https://code.visualstudio.com/docs"><img src="vscode.png"
+                    class="size-24 rounded-full hover:-translate-y-6 hover:transition cursor-pointer hover:shadow-lg hover:shadow-gray-400 max-[425px]:h-16 max-[425px]:w-16"></a>
+        </div>
+
+    </main>
+
+    <main id="projects_sec"
+        class="flex justify-center flex-col w-screen p-4 pt-32 max-[425px]:block max-[425px]:w-full ">
+        <div class="edu flex justify-around">
+            <h1 class="text-4xl text-center font-extrabold uppercase  ">projects I have worked on
+                <hr class="w-full mx-auto my-6 border-stone-50 border-2 rounded-full max-[425px]:w-2/3  ">
+            </h1>
+        </div>
+        <div id="#projects" class="md:grid md:grid-cols-2 ">
+            <div class="flex justify-center">
+                <div
+                    class=" md:my-6 my-20 bg-gray-700 h-auto w-2/5 p-4 rounded-2xl max-[425px]:flex-col max-[425px]:mx-0 max-[425px]: max-[425px]:w-full">
+
+
+                    <img src="quiz game.jpg"
+                        class="size-28 w-auto my-6 mx-6 rounded-2xl max-[425px]:w-4/5 max-[425px]:h-48 max-[425px]:my-6 max-[425px]:mx-8">
+
+                    <div class="md:mx-0 mx-32 text-center my-auto max-[425px]:mx-0 max-[425px]:my-12">
+                        <h1 class="text-lg font-bold md:my-2 my-10 text-gray-200 uppercase ">Python Quiz Game</h1>
+                        <h2 class="text-sm md:text-xs">A visually appealing quiz game created using Python programming.
+                            It
+                            features various question
+                            formats, tracks your score, and provides feedback, making it both educational and
+                            entertaining.
+                        </h2>
+                        <a href="https://github.com/connectwithhassan/QuizGame"><button
+                                class="bg-gray-800 p-2 md:my-2 m-10 rounded-full md:px-6 px-11 text-sm hover:bg-gray-400 hover:text-gray-800 max-[425px]:text-sm max-[425px]:mr-3">Checkout</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex justify-center">
+                <div
+                    class=" md:my-6 my-20 bg-gray-700 h-auto w-2/5 p-4 rounded-2xl max-[425px]:flex-col max-[425px]:mx-0 max-[425px]: max-[425px]:w-full">
+                    <img src="snakegame.jpg"
+                        class="size-28 w-auto my-6 mx-6 rounded-2xl max-[425px]:w-4/5 max-[425px]:h-48 max-[425px]:my-6 max-[425px]:mx-8">
+
+                    <div class="md:mx-0 mx-32 text-center my-auto max-[425px]:mx-0 max-[425px]:my-12">
+                        <h1 class="text-lg font-bold md:my-2 my-10 text-gray-200 uppercase ">Java Snake Game</h1>
+                        <h2 class="text-sm md:text-xs">A classic arcade game recreated in Java. The player controls a
+                            snake
+                            that grows longer by eating
+                            food, while avoiding obstacles and its own body. The game features a simple yet addictive
+                            gameplay,
+                            and often includes features like power-ups and multiple difficulty levels.</h2>
+                        <a href="https://github.com/connectwithhassan/SnakeGame"><button
+                                class="bg-gray-800 p-2 md:my-2 m-10 rounded-full md:px-6 px-11 text-sm hover:bg-gray-400 hover:text-gray-800 max-[425px]:text-sm max-[425px]:mr-3 ">Checkout</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="flex justify-center">
+                <div
+                    class=" md:my-6 my-20 bg-gray-700 h-auto w-2/5 p-4 rounded-2xl max-[425px]:flex-col max-[425px]:mx-0 max-[425px]: max-[425px]:w-full">
+                    <center><img src="Scholar's haven1.jpg"
+                            class="size-28 w-auto my-6 mx-6 rounded-2xl max-[425px]:w-4/5 max-[425px]:h-48 max-[425px]:my-6 max-[425px]:mx-8">
+
+                        <div class="md:mx-0 mx-32 text-center my-auto max-[425px]:mx-0 max-[425px]:my-12">
+                            <h1 class="text-lg font-bold md:my-2 my-10 text-gray-200 uppercase  ">Scholar's Haven</h1>
+                            <h2 class="text-sm md:text-xs">Scholar's Haven is an educational website offering a variety
+                                of
+                                programs, including undergraduate,
+                                postgraduate, and PhD courses. It provides detailed information about the institution
+                                and
+                                its
+                                owners, as well as a convenient query form for students to seek assistance. The website
+                                also
+                                features a user-friendly signup process for prospective students.</h2>
+                            <a href="https://github.com/connectwithhassan/Scholars-Haven"><button
+                                    class="bg-gray-800 p-2 md:my-2 m-10 rounded-full md:px-6 px-11 text-sm hover:bg-gray-400 hover:text-gray-800 max-[425px]:text-sm max-[425px]:mr-3">Checkout</button></a>
+                        </div>
+                </div>
+                </center>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <main id="contacts_sec"
+        class="flex justify-center flex-col w-screen pb-0 md:p-32 max-[425px]:block max-[425px]:w-full max-[425px]:my-20 ">
+
+
+        <div class="edu flex justify-around">
+            <h1 class="text-4xl text-center font-extrabold uppercase ">my socials
+                <hr class="w-[89%] ml-5 my-6 border-stone-50 border-2 rounded-full max-[425px]:w-2/3 max-[425px]:ml-9 ">
+            </h1>
+        </div>
+
+        <div class="w-full my-12 flex justify-around">
+            <div><a
+                    href="https://www.linkedin.com/in/hassan-abbas-606100256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                        src="icons8-linkedin-144.png"
+                        class="rounded-full shadow-gray-600 size-5 md:size-20 hover:transition hover:-translate-y-6 hover:shadow-gray-600 hover:shadow-xl cursor-pointer max-[425px]:w-20 max-[425px]:h-20 "
+                        alt=""></a>
+                <h1 class="uppercase text-center font-bold text-lg my-8 max-[425px]:text-xs text-gray-50">Linkedin</h1>
+            </div>
+            <div><a href="https://www.instagram.com/its._.hassannn?igsh=OHY1MTB0cW14ZXBr"><img
+                        src="icons8-instagram-144.png"
+                        class="rounded-full shadow-gray-600 size-5 md:size-20 hover:transition hover:-translate-y-6 hover:shadow-gray-600 hover:shadow-xl cursor-pointer max-[425px]:w-20 max-[425px]:h-20"
+                        alt=""></a>
+                <h1 class="uppercase text-center font-bold mx-auto text-lg my-8 max-[425px]:text-xs text-gray-50">Instagram</h1>
+            </div>
+
+            <div><a href="https://github.com/connectwithhassan"><img src="icons8-github-144.png"
+                        class="rounded-full shadow-gray-600 size-5 md:size-20 hover:transition hover:-translate-y-6 hover:shadow-gray-600 hover:shadow-xl cursor-pointer max-[425px]:w-20 max-[425px]:h-20"
+                        alt=""></a>
+                <h1 class="uppercase text-center font-bold text-lg my-8 max-[425px]:text-xs text-gray-50">github</h1>
+            </div>
+            <div><img src="icons8-gmail-144.png"
+                    class="rounded-full shadow-gray-600 size-5 md:size-20 hover:transition hover:-translate-y-6 hover:shadow-gray-600 hover:shadow-xl cursor-pointer max-[425px]:w-20 max-[425px]:h-20"
+                    alt="">
+                <h1 class="uppercase text-center font-bold text-lg my-8 max-[425px]:text-xs text-gray-50">Email</h1>
+            </div>  
+        </div>
+
+
+
+
+    </main>
+
+    <script src="index.js"></script>
 
 </body>
 
@@ -65,39 +361,24 @@
 
         <img src="logo-removebg-preview.png" class="w-28 ml-0 max-[425px]:w-20 max-[425px]:ml-0" alt="">
         <a href="contact.html"><button
-            class="ml-0 font-serif bg-gray-400 text-gray-800 p-3 rounded-full w-32 hover:bg-gray-950 hover:text-gray-400 max-[425px]:text-[8px] max-[425px]:w-16 max-[425px]:ml-3">
-            Contact</button></a>
+                class="ml-0 font-serif bg-gray-400 text-gray-800 p-3 rounded-full w-32 hover:bg-gray-950 hover:text-gray-400 max-[425px]:text-[8px] max-[425px]:w-16 max-[425px]:ml-3">
+                Contact</button></a>
         <h1 class="my-8 text-[12px] text-wrap text-end max-[425px]:text-[8px]">Copyright &copy All rights reserved 2024
         </h1>
     </div>
 
     <div class="fnav text-xs flex">
         <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5 max-[425px]:ml-2">
-        <nav>
-            <ul class="mr-16 w-8 pt-10 pb-5 ml-0 max-[425px]:text-[8px] max-[425px]:pt-5">
-                <a href="index.html">
-                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Home</li>
-                </a>
-                <a href="about.html">
-                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">About</li>
-                </a>
-                <a href="education.html">
-                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Education</li>
-                </a>
-                <a href="skills.html"><li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Skills</li></a>
-                <a href="Projects.html">
-                    <li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Projects</li>
-                </a>
-                <a href="contact.html"><li class="mx-20 p-1 cursor-pointer max-[425px]:mx-8">Contact</li></a>
-            </ul>
-        </nav>
-        <hr class="border-stone-50 h-4/5 border-l ml-28 mt-5 mb-5 max-[425px]:ml-2">
-
+       
+                
 
         <div class="socials ml-28 mt-8 max-[425px]:ml-10 max-[425px]:mt-5">
 
-            <a href="https://www.instagram.com/its._.hassannn?igsh=OHY1MTB0cW14ZXBr"><img src="icons8-instagram-32.png" class="mt-1" alt=""></a>
-            <a href="https://www.linkedin.com/in/hassan-abbas-606100256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="icons8-linkedin-32.png" class="mt-1" alt=""></a>
+            <a href="https://www.instagram.com/its._.hassannn?igsh=OHY1MTB0cW14ZXBr"><img src="icons8-instagram-32.png"
+                    class="mt-1" alt=""></a>
+            <a
+                href="https://www.linkedin.com/in/hassan-abbas-606100256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                    src="icons8-linkedin-32.png" class="mt-1" alt=""></a>
             <a href="https://github.com/connectwithhassan   "><img src="icons8-github-32.png" class="mt-1" alt=""></a>
             <a href=""><img src="icons8-email-32.png" class="mt-1" alt=""></a>
         </div>
@@ -106,6 +387,8 @@
 
 
     </div>
+
+<script src="index.js"></script>
 
 </footer>
 
