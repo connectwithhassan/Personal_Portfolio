@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowUpRight, FileDown } from "lucide-react";
-import { FaWhatsapp, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { FaWhatsapp, FaLinkedinIn, FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa6";
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/portfolioData";
 import ContactForm from "@/components/ContactForm";
@@ -197,6 +197,19 @@ export default function FooterSection() {
                 Connect On Social
               </span>
               <div className="flex items-center justify-center gap-2.5">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={personalInfo.socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  aria-label="Hassan Abbas on GitHub"
+                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-white text-[#888888] hover:text-white hover:bg-white/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-white"
+                >
+                  <FaGithub className="w-4 h-4" />
+                </motion.a>
+
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}

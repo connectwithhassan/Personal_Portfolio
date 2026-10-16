@@ -58,7 +58,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/syed-muhammad-hassan-abbas-naqvi-a92218323",
     instagram: "https://www.instagram.com/its._.hassannn/",
     facebook: "https://www.facebook.com/share/1HyUTk1grC/",
-    github: "https://github.com/",
+    github: "https://github.com/connectwithhassan",
     resume: "/Hassan-CV.pdf",
   },
 };
