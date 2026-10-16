@@ -146,15 +146,22 @@ export default function HeroSection() {
 
             {/* Action CTA */}
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <Link
-                href="#contact"
-                className="group inline-flex items-center justify-between sm:justify-start gap-4 px-6 py-3.5 bg-[#0f0f0f] border border-[#262626] hover:border-[#2563eb] hover:bg-[#2563eb]/10 text-white rounded-none transition-all duration-300 shadow-sm"
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto"
               >
-                <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#e0e0e0] group-hover:text-[#3b82f6] transition-colors">
-                  LET&apos;S CREATE SOMETHING GREAT
-                </span>
-                <ArrowUpRight className="w-4 h-4 text-[#2563eb] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
+                <Link
+                  href="#contact"
+                  className="group inline-flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4 px-6 py-3.5 bg-[#0f0f0f] border border-[#262626] hover:border-[#2563eb] hover:bg-[#2563eb]/10 text-white rounded-none transition-all duration-300 shadow-sm focus-visible:outline-2 focus-visible:outline-[#2563eb]"
+                  aria-label="Let's create something great - Navigate to contact form"
+                >
+                  <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#e0e0e0] group-hover:text-[#3b82f6] transition-colors">
+                    LET&apos;S CREATE SOMETHING GREAT
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-[#2563eb] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
+              </motion.div>
             </div>
           </div>
         </motion.div>

@@ -2,16 +2,24 @@
 
 import React from "react";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Globe, ArrowUpRight, FileDown } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, FileDown } from "lucide-react";
 import { FaWhatsapp, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/portfolioData";
 import ContactForm from "@/components/ContactForm";
 
 export default function FooterSection() {
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.history.pushState) {
+      window.history.pushState(null, "", "#hero");
+    }
+  };
+
   return (
     <footer id="contact" className="w-full bg-[#050505] border-t border-[#1a1a1a] scroll-mt-14 overflow-hidden">
-      {/* Main CTA & Contact Grid matching the reference image layout */}
+      {/* Main CTA & Contact Grid */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-[#1a1a1a]">
         {/* Left Column: Big Bold Statement */}
         <motion.div
@@ -40,7 +48,7 @@ export default function FooterSection() {
               EXTRAORDINARY.
             </h2>
 
-            {/* Interactive Contact Form directly connected to Hassan's Gmail */}
+            {/* Interactive Contact Form */}
             <ContactForm />
           </div>
 
@@ -69,7 +77,7 @@ export default function FooterSection() {
               {/* Email */}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors"
+                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#2563eb]"
               >
                 <div className="w-8 h-8 rounded-sm bg-[#121212] border border-[#222222] group-hover:border-[#2563eb] flex items-center justify-center text-[#2563eb] shrink-0 group-hover:scale-105 transition-transform">
                   <Mail className="w-4 h-4" />
@@ -85,7 +93,7 @@ export default function FooterSection() {
               {/* Phone */}
               <a
                 href={`tel:${personalInfo.phoneRaw}`}
-                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors"
+                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#2563eb]"
               >
                 <div className="w-8 h-8 rounded-sm bg-[#121212] border border-[#222222] group-hover:border-[#2563eb] flex items-center justify-center text-[#2563eb] shrink-0 group-hover:scale-105 transition-transform">
                   <Phone className="w-4 h-4" />
@@ -115,7 +123,7 @@ export default function FooterSection() {
                 download="Hassan-Abbas-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors"
+                className="group flex items-start gap-3.5 text-[#a3a3a3] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#2563eb]"
               >
                 <div className="w-8 h-8 rounded-sm bg-[#121212] border border-[#222222] group-hover:border-[#2563eb] flex items-center justify-center text-[#2563eb] shrink-0 group-hover:scale-105 transition-transform">
                   <FileDown className="w-4 h-4" />
@@ -150,16 +158,20 @@ export default function FooterSection() {
               LET&apos;S CONNECT
             </span>
 
-            {/* Framed QR Code matching reference image */}
-            <div className="relative p-4 bg-[#0d0d0d] border border-[#242424] hover:border-[#2563eb] transition-all rounded-sm group mt-2 hover:scale-[1.02] duration-300">
+            {/* Framed QR Code */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.99 }}
+              className="relative p-4 bg-[#0d0d0d] border border-[#242424] hover:border-[#2563eb] transition-all rounded-sm group mt-2 shadow-lg"
+            >
               <a
                 href={personalInfo.socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Scan or click to open WhatsApp chat"
-                className="block"
+                aria-label="Scan or click to chat with Hassan on WhatsApp"
+                className="block focus-visible:outline-2 focus-visible:outline-[#2563eb]"
               >
-                {/* 100% Real, Scannable WhatsApp QR Code in electric blue */}
                 <div className="w-44 h-44 sm:w-48 sm:h-48 mx-auto bg-[#0d0d0d] p-1 rounded-sm flex items-center justify-center">
                   <Image
                     src="/qr-whatsapp-blue.png"
@@ -177,7 +189,7 @@ export default function FooterSection() {
                   <ArrowUpRight className="w-3 h-3 text-[#2563eb]" />
                 </p>
               </a>
-            </div>
+            </motion.div>
 
             {/* Social Links: LinkedIn, Instagram, Facebook */}
             <div className="mt-5 pt-4 border-t border-[#1a1a1a] w-full flex flex-col items-center">
@@ -185,35 +197,44 @@ export default function FooterSection() {
                 Connect On Social
               </span>
               <div className="flex items-center justify-center gap-2.5">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   href={personalInfo.socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="LinkedIn"
-                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#0077b5] text-[#888888] hover:text-[#0077b5] hover:bg-[#0077b5]/10 flex items-center justify-center transition-all group"
+                  aria-label="Hassan Abbas on LinkedIn"
+                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#0077b5] text-[#888888] hover:text-[#0077b5] hover:bg-[#0077b5]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#0077b5]"
                 >
-                  <FaLinkedinIn className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                </a>
+                  <FaLinkedinIn className="w-4 h-4" />
+                </motion.a>
 
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   href={personalInfo.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Instagram"
-                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#e1306c] text-[#888888] hover:text-[#e1306c] hover:bg-[#e1306c]/10 flex items-center justify-center transition-all group"
+                  aria-label="Hassan Abbas on Instagram"
+                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#e1306c] text-[#888888] hover:text-[#e1306c] hover:bg-[#e1306c]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#e1306c]"
                 >
-                  <FaInstagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                </a>
+                  <FaInstagram className="w-4 h-4" />
+                </motion.a>
 
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   href={personalInfo.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Facebook"
-                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#1877f2] text-[#888888] hover:text-[#1877f2] hover:bg-[#1877f2]/10 flex items-center justify-center transition-all group"
+                  aria-label="Hassan Abbas on Facebook"
+                  className="w-9 h-9 rounded-sm bg-[#121212] border border-[#222222] hover:border-[#1877f2] text-[#888888] hover:text-[#1877f2] hover:bg-[#1877f2]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#1877f2]"
                 >
-                  <FaFacebookF className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
-                </a>
+                  <FaFacebookF className="w-3.5 h-3.5" />
+                </motion.a>
               </div>
             </div>
           </div>
@@ -226,17 +247,20 @@ export default function FooterSection() {
         </motion.div>
       </div>
 
-      {/* Very Bottom Copyright & Bar */}
+      {/* Bottom Copyright & Bar */}
       <div className="px-6 sm:px-10 py-5 border-t border-[#151515] flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-[#666666] gap-3">
         <div>
           © {personalInfo.copyrightYear} {personalInfo.name}. All rights reserved.
         </div>
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-white transition-colors">
+          <button
+            onClick={scrollToTop}
+            className="hover:text-white transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[#2563eb]"
+          >
             Back to Top ↑
-          </a>
+          </button>
           <span>•</span>
-          <span className="text-[#888888]">Built with Next.js & Tailwind CSS</span>
+          <span className="text-[#888888]">Built with Next.js, Motion & Tailwind CSS</span>
         </div>
       </div>
     </footer>
