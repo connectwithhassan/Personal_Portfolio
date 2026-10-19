@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "S.M Hassan Abbas", url: "https://github.com/connectwithhassan" }],
   creator: "S.M Hassan Abbas",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

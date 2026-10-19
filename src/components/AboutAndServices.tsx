@@ -40,8 +40,8 @@ export default function AboutAndServices() {
               <span className="text-[#94a3b8] font-normal">Code with precision.</span>
             </h2>
 
-            <p className="text-sm text-[#cbd5e1] leading-relaxed mb-5 font-sans">
-              I am a Technical Project Manager & Full-Stack Developer with deep hands-on expertise across modern engineering stacks. I bridge client vision with technical execution—translating complex product scopes into clean architectures, sprint milestones, and production-ready applications.
+            <p className="text-sm text-[#cbd5e1] leading-relaxed mb-4 font-sans">
+              I am a Technical Project Manager & Full-Stack Developer with hands-on expertise across modern engineering stacks. I bridge client vision with technical execution—translating product roadmaps into resilient architectures, sprint milestones, and production releases.
             </p>
 
             <p className="text-sm text-[#94a3b8] leading-relaxed">
@@ -49,12 +49,11 @@ export default function AboutAndServices() {
             </p>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-[#1c1d24] flex items-center gap-4 text-xs font-mono text-[#94a3b8]">
+          <div className="mt-8 pt-6 border-t border-[#1c1d24] flex items-center justify-between text-xs font-mono">
             <span className="inline-flex items-center gap-1.5 text-emerald-400">
               <CheckCircle2 className="w-4 h-4" aria-hidden="true" /> Available for hire
             </span>
-            <span>•</span>
-            <span>Karachi / Remote</span>
+            <span className="text-[#94a3b8]">Karachi / Remote</span>
           </div>
         </motion.div>
 

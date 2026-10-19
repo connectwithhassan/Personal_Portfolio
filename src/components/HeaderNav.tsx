@@ -95,60 +95,61 @@ export default function HeaderNav() {
             </span>
           </div>
 
-          {/* Column 3: Availability & Action */}
-          <div className="px-6 py-3.5 flex items-center gap-5 shrink-0">
-            <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#94a3b8] block">
-                STATUS
-              </span>
-              <span className="text-[11px] font-mono font-semibold tracking-wider text-[#10b981] uppercase flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                AVAILABLE FOR HIRE
-              </span>
-            </div>
+            {/* Column 3: Availability & Action */}
+            <div className="px-6 py-3.5 flex items-center gap-5 shrink-0">
+              <div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-[#94a3b8] block">
+                  STATUS
+                </span>
+                <span className="text-[11px] font-mono font-semibold tracking-wider text-[#10b981] uppercase flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  AVAILABLE FOR HIRE
+                </span>
+              </div>
 
-            {/* Quick Social Links */}
-            <div className="flex items-center gap-3 border-l border-[#1c1d24] pl-4">
+              {/* Quick Social Links with WCAG 44px touch targets */}
+              <div className="flex items-center gap-1.5 border-l border-[#1c1d24] pl-3">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={personalInfo.socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-sm bg-[#111216] border border-[#282a35] hover:border-white text-[#cbd5e1] hover:text-white flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                  title="GitHub"
+                  aria-label="GitHub Profile"
+                >
+                  <GithubIcon className="w-4 h-4" />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={personalInfo.socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#38bdf8] text-[#cbd5e1] hover:text-[#38bdf8] flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                  title="LinkedIn"
+                  aria-label="LinkedIn Profile"
+                >
+                  <LinkedinIcon className="w-4 h-4" />
+                </motion.a>
+              </div>
+
+              {/* Action: CV */}
               <motion.a
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.95 }}
-                href={personalInfo.socialLinks.github}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href={personalInfo.socialLinks.resume}
+                download="Hassan-Abbas-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94a3b8] hover:text-white transition-colors p-1 rounded focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
-                title="GitHub"
-                aria-label="GitHub Profile"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#282a35] hover:border-[#3b82f6] text-[11px] uppercase tracking-wider font-mono text-[#cbd5e1] hover:text-[#3b82f6] transition-all rounded-sm bg-[#111216] hover:bg-[#17181f] focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                aria-label="Download Hassan Abbas Curriculum Vitae PDF"
               >
-                <GithubIcon className="w-4 h-4" />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.95 }}
-                href={personalInfo.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#94a3b8] hover:text-[#38bdf8] transition-colors p-1 rounded focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
-                title="LinkedIn"
-                aria-label="LinkedIn Profile"
-              >
-                <LinkedinIcon className="w-4 h-4" />
+                <FileDown className="w-3.5 h-3.5 text-[#3b82f6]" />
+                <span>CV</span>
               </motion.a>
             </div>
-
-            {/* Action: CV */}
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              href={personalInfo.socialLinks.resume}
-              download="Hassan-Abbas-CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#282a35] hover:border-[#3b82f6] text-[11px] uppercase tracking-wider font-mono text-[#f9fafb] hover:text-[#3b82f6] transition-all rounded-sm bg-[#111216] focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
-            >
-              <FileDown className="w-3.5 h-3.5" />
-              <span>CV</span>
-            </motion.a>
-          </div>
         </div>
 
         {/* Mobile Top Header - Semantic fix: replace h1 with paragraph so canonical h1 is in HeroSection */}

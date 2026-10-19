@@ -58,7 +58,7 @@ export default function FooterSection() {
           <div className="mt-8 pt-4 border-t border-[#1c1d24] flex items-center justify-between text-xs font-mono text-[#94a3b8]">
             <span className="text-[#cbd5e1]">Direct: {personalInfo.email}</span>
             <span className="flex items-center gap-1.5 text-emerald-400 text-[11px]">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> &lt; 24h Response
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Prompt Response
             </span>
           </div>
         </motion.div>
@@ -146,7 +146,7 @@ export default function FooterSection() {
 
           <div className="pt-8 border-t border-[#1c1d24]">
             <span className="text-[10px] font-mono uppercase text-[#94a3b8]">
-              Response SLA: Under 24 hours
+              Response SLA: Typical within 24-48 business hours
             </span>
           </div>
         </motion.div>

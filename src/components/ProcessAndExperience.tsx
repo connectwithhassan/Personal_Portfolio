@@ -5,6 +5,7 @@ import { processSteps, experienceList, educationList, skillsList } from "@/data/
 import { Briefcase, GraduationCap, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { SkillIcons } from "@/components/TechSkillIcons";
+import { Badge } from "@/components/ui";
 
 type TabKey = "experience" | "education" | "skills";
 
@@ -169,16 +170,16 @@ export default function ProcessAndExperience() {
                   >
                     <div className="space-y-3 flex-1">
                       <div className="flex flex-wrap items-center gap-3">
-                        <span className="text-[10px] font-mono uppercase bg-[#2563eb]/20 text-[#60a5fa] px-2.5 py-0.5 border border-[#2563eb]/30 rounded-xs font-semibold">
+                        <Badge variant="accent" size="sm">
                           {item.company}
-                        </span>
+                        </Badge>
                         <span className="text-xs font-mono text-[#94a3b8]">
                           {item.period}
                         </span>
                         {item.type && (
-                          <span className="text-[10px] font-mono uppercase text-[#94a3b8] border border-[#282a35] px-2 py-0.5 rounded-xs">
+                          <Badge variant="default" size="sm">
                             {item.type}
-                          </span>
+                          </Badge>
                         )}
                       </div>
 

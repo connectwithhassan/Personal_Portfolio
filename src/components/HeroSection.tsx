@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight, FolderGit2 } from "lucide-react";
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/portfolioData";
+import { Button, Badge } from "@/components/ui";
 
 export default function HeroSection() {
   return (
@@ -104,17 +104,22 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-5 xl:col-span-4 flex flex-col justify-center px-6 sm:px-10 lg:px-8 xl:px-12 py-10 lg:py-12 bg-[#070707] relative z-10 h-full overflow-y-auto"
+          className="lg:col-span-5 xl:col-span-4 flex flex-col justify-center px-6 sm:px-10 lg:px-8 xl:px-12 py-8 sm:py-10 lg:py-12 bg-[#070707] relative z-10 h-full overflow-y-auto"
         >
-          <div className="max-w-md mx-auto lg:mx-0 w-full space-y-6">
-            {/* Greeting badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#111216] border border-[#282a35] text-[#94a3b8] text-xs font-mono tracking-wider">
-              <span>Hello, I&apos;m</span>
+          <div className="max-w-md mx-auto lg:mx-0 w-full space-y-5 sm:space-y-6">
+            {/* Status & Role kicker */}
+            <div className="flex items-center gap-2">
+              <Badge variant="default" size="sm">
+                HELLO, I&apos;M
+              </Badge>
+              <Badge variant="accent" size="sm" dot>
+                KARACHI • REMOTE
+              </Badge>
             </div>
 
-            {/* Canonical H1 Name Heading */}
+            {/* Canonical H1 Name Heading & Dual Capability Headline */}
             <div>
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-white font-space uppercase">
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-white font-space uppercase leading-tight">
                 {personalInfo.name}
               </h1>
               {/* Electric blue accent bar */}
@@ -122,66 +127,59 @@ export default function HeroSection() {
                 initial={{ width: 0 }}
                 animate={{ width: 80 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="h-1.5 bg-[#2563eb] mt-3"
+                className="h-1 bg-[#2563eb] mt-3"
               />
               <p className="text-xs sm:text-sm font-mono text-[#3b82f6] uppercase tracking-wider font-semibold mt-2.5">
-                {personalInfo.title}
+                Technical Project Manager & Full-Stack Developer
               </p>
             </div>
 
-            {/* Bio paragraph from verified CV */}
-            <p className="text-[#cbd5e1] text-sm sm:text-base leading-relaxed font-sans">
-              {personalInfo.heroBio}
+            {/* Concise Bio highlighting technical + agile execution */}
+            <p className="text-[#cbd5e1] text-xs sm:text-sm leading-relaxed font-sans">
+              I bridge executive product strategy with hands-on full-stack engineering. Experienced in architecting scalable Next.js, Fastify, and Python/AI systems while directing agile sprint milestones to on-time production delivery.
             </p>
 
-            {/* Core focus pills */}
-            <div className="flex flex-wrap gap-2 pt-1">
-              <span className="px-2.5 py-1 text-[11px] font-mono uppercase bg-[#111216] border border-[#282a35] text-[#cbd5e1]">
-                Full Stack Engineering
-              </span>
-              <span className="px-2.5 py-1 text-[11px] font-mono uppercase bg-[#111216] border border-[#282a35] text-[#cbd5e1]">
-                Sprint Leadership
-              </span>
-              <span className="px-2.5 py-1 text-[11px] font-mono uppercase bg-[#2563eb]/10 border border-[#2563eb]/40 text-[#60a5fa]">
-                AI & Systems Architecture
-              </span>
+            {/* Core Capability Pills via Badge Primitive */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <Badge variant="default" size="sm">
+                Full-Stack Architecture
+              </Badge>
+              <Badge variant="default" size="sm">
+                Agile Sprint Leadership
+              </Badge>
+              <Badge variant="accent" size="sm">
+                AI / RAG Pipelines
+              </Badge>
             </div>
 
             {/* Action CTAs */}
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex-1"
-              >
-                <Link
+            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <div className="flex-1">
+                <Button
                   href="#contact"
-                  className="group inline-flex w-full items-center justify-between gap-3 px-5 py-3.5 bg-[#2563eb] hover:bg-[#1d4ed8] text-white rounded-sm transition-all duration-200 shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] focus-visible:outline-2 focus-visible:outline-white"
-                  aria-label="Let's create something great - Navigate to contact form"
+                  variant="primary"
+                  size="md"
+                  icon={<ArrowUpRight className="w-4 h-4" />}
+                  className="w-full justify-between"
+                  aria-label="Navigate to contact form to discuss a project"
                 >
-                  <span className="text-xs font-mono font-bold tracking-widest uppercase">
-                    LET&apos;S CREATE SOMETHING GREAT
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
-              </motion.div>
+                  LET&apos;S CREATE SOMETHING GREAT
+                </Button>
+              </div>
 
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto"
-              >
-                <Link
+              <div className="w-full sm:w-auto">
+                <Button
                   href="#projects"
-                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-4 py-3.5 bg-[#111216] border border-[#282a35] hover:border-[#3b82f6] text-[#cbd5e1] hover:text-[#3b82f6] rounded-sm transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
-                  aria-label="View selected projects"
+                  variant="secondary"
+                  size="md"
+                  icon={<FolderGit2 className="w-4 h-4 text-[#3b82f6]" />}
+                  iconPosition="left"
+                  className="w-full sm:w-auto"
+                  aria-label="View selected production projects"
                 >
-                  <FolderGit2 className="w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6] transition-colors" />
-                  <span className="text-xs font-mono font-semibold tracking-wider uppercase">
-                    SELECTED WORK
-                  </span>
-                </Link>
-              </motion.div>
+                  SELECTED WORK
+                </Button>
+              </div>
             </div>
           </div>
         </motion.div>

@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ArrowUpRight, CheckCircle2, X, Layers, Cpu } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, X, Layers, Cpu, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { projectsData, Project } from "@/data/portfolioData";
+import { Button, Badge } from "@/components/ui";
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -199,20 +200,17 @@ export default function ProjectsSection() {
                   {project.description}
                 </p>
 
-                {/* Tech Badges */}
+                {/* Tech Badges with Badge primitive */}
                 <div className="flex flex-wrap gap-1.5 pt-2">
                   {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-0.5 text-[10px] font-mono bg-[#111216] border border-[#282a35] text-[#94a3b8] group-hover:border-[#3b82f6]/40 transition-colors"
-                    >
+                    <Badge key={tech} variant="default" size="sm">
                       {tech}
-                    </span>
+                    </Badge>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-2 py-0.5 text-[10px] font-mono bg-[#111216] border border-[#282a35] text-[#94a3b8]">
+                    <Badge variant="muted" size="sm">
                       +{project.technologies.length - 3}
-                    </span>
+                    </Badge>
                   )}
                 </div>
               </div>
@@ -229,16 +227,16 @@ export default function ProjectsSection() {
                 </p>
               </div>
 
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="sm"
+                icon={<ArrowUpRight className="w-3.5 h-3.5 text-[#3b82f6]" />}
                 onClick={(e) => openModal(project, e)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#111216] border border-[#282a35] hover:border-[#3b82f6] text-[#cbd5e1] hover:text-[#3b82f6] rounded-xs transition-colors shrink-0 focus-visible:outline-2 focus-visible:outline-[#3b82f6] cursor-pointer"
                 aria-haspopup="dialog"
                 aria-label={`View full case study and technical specs for ${project.title}`}
               >
-                <span>SPECS</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#3b82f6]" aria-hidden="true" />
-              </button>
+                SPECS
+              </Button>
             </div>
           </motion.article>
         ))}
@@ -381,19 +379,22 @@ export default function ProjectsSection() {
                   Verified production architecture and sprint tracking.
                 </span>
                 <div className="flex items-center gap-3">
-                  <button
-                    type="button"
+                  <Button
+                    variant="outline"
+                    size="sm"
                     onClick={closeModal}
-                    className="px-4 py-2 border border-[#282a35] text-xs font-mono text-[#cbd5e1] hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6] cursor-pointer"
                   >
                     Close
-                  </button>
-                  <a
+                  </Button>
+                  <Button
+                    variant="primary"
+                    size="sm"
                     href={`mailto:connect.hassanabbas@gmail.com?subject=Inquiry regarding ${selectedProject.title}`}
-                    className="px-4 py-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-xs font-mono font-bold text-white transition-colors focus-visible:outline-2 focus-visible:outline-white"
+                    external
+                    icon={<ExternalLink className="w-3.5 h-3.5" />}
                   >
                     Discuss This Architecture
-                  </a>
+                  </Button>
                 </div>
               </div>
             </motion.div>

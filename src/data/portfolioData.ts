@@ -264,7 +264,7 @@ export const projectsData: Project[] = [
       "Custom Admin Control Panel: Centralized dashboard for non-technical staff to update product inventory, track orders, and view daily sales.",
       "High-Throughput Node.js API: RESTful endpoints with validation guards and connection pooling for concurrent traffic spikes.",
       "Dynamic Catalog Filtering: Category drill-downs, instantaneous price/stock updates, and lightweight cart state management.",
-      "Core Web Vitals Optimization: Sub-second initial contentful paint with optimized asset delivery and responsive layouts.",
+      "Frontend Architecture Optimization: Clean component splitting with optimized static asset caching and responsive layouts.",
     ],
     image: "/tawakkal-logo.webp",
     logo: "/tawakkal-logo.webp",

@@ -237,7 +237,7 @@ export default function ContactForm() {
             </button>
 
             <span className="text-[10px] text-[#94a3b8] font-mono">
-              Direct inbox • 24h response
+              Direct inbox review
             </span>
           </div>
         </form>
