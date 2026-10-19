@@ -205,14 +205,14 @@ export default function FooterSection() {
               <span className="text-[10px] font-mono text-[#94a3b8] uppercase tracking-wider mb-2.5">
                 Connect On Professional Socials
               </span>
-              <div className="flex items-center justify-center gap-2.5">
+              <div className="flex items-center justify-center gap-3">
                 <a
                   href={personalInfo.socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="GitHub"
                   aria-label="Hassan Abbas on GitHub"
-                  className="w-9 h-9 rounded-sm bg-[#111216] border border-[#282a35] hover:border-white text-[#cbd5e1] hover:text-white hover:bg-white/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-white"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#111216] border border-[#282a35] hover:border-white text-[#cbd5e1] hover:text-white hover:bg-white/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-white"
                 >
                   <FaGithub className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -223,7 +223,7 @@ export default function FooterSection() {
                   rel="noopener noreferrer"
                   title="LinkedIn"
                   aria-label="Hassan Abbas on LinkedIn"
-                  className="w-9 h-9 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#0077b5] text-[#cbd5e1] hover:text-[#0077b5] hover:bg-[#0077b5]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#0077b5]"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#0077b5] text-[#cbd5e1] hover:text-[#0077b5] hover:bg-[#0077b5]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#0077b5]"
                 >
                   <FaLinkedinIn className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -234,7 +234,7 @@ export default function FooterSection() {
                   rel="noopener noreferrer"
                   title="Instagram"
                   aria-label="Hassan Abbas on Instagram"
-                  className="w-9 h-9 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#e1306c] text-[#cbd5e1] hover:text-[#e1306c] hover:bg-[#e1306c]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#e1306c]"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#e1306c] text-[#cbd5e1] hover:text-[#e1306c] hover:bg-[#e1306c]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#e1306c]"
                 >
                   <FaInstagram className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -245,7 +245,7 @@ export default function FooterSection() {
                   rel="noopener noreferrer"
                   title="Facebook"
                   aria-label="Hassan Abbas on Facebook"
-                  className="w-9 h-9 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#1877f2] text-[#cbd5e1] hover:text-[#1877f2] hover:bg-[#1877f2]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#1877f2]"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#1877f2] text-[#cbd5e1] hover:text-[#1877f2] hover:bg-[#1877f2]/10 flex items-center justify-center transition-all focus-visible:outline-2 focus-visible:outline-[#1877f2]"
                 >
                   <FaFacebookF className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>

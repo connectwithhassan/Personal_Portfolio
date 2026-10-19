@@ -50,35 +50,35 @@ export default function HeaderNav() {
           </Link>
 
           {/* Column 1: Navigation */}
-          <div className="flex-1 px-6 py-3.5 flex items-center justify-end min-w-0">
-            <nav className="flex items-center gap-6 text-[11px] uppercase tracking-wider text-[#94a3b8]" aria-label="Main Navigation">
+          <div className="flex-1 px-6 py-2 flex items-center justify-end min-w-0">
+            <nav className="flex items-center gap-4 lg:gap-6 text-[11px] uppercase tracking-wider text-[#94a3b8]" aria-label="Main Navigation">
               <a
                 href="#about"
-                className="hover:text-white transition-colors duration-200 py-1 focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
+                className="hover:text-white transition-colors duration-200 py-2.5 px-2 inline-flex items-center min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
               >
                 About
               </a>
               <a
                 href="#projects"
-                className="hover:text-[#60a5fa] transition-colors duration-200 py-1 focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
+                className="hover:text-[#60a5fa] transition-colors duration-200 py-2.5 px-2 inline-flex items-center min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
               >
                 Projects
               </a>
               <a
                 href="#process"
-                className="hover:text-white transition-colors duration-200 py-1 focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
+                className="hover:text-white transition-colors duration-200 py-2.5 px-2 inline-flex items-center min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
               >
                 Process
               </a>
               <a
                 href="#experience"
-                className="hover:text-white transition-colors duration-200 py-1 focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
+                className="hover:text-white transition-colors duration-200 py-2.5 px-2 inline-flex items-center min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
               >
                 Experience
               </a>
               <a
                 href="#contact"
-                className="hover:text-white transition-colors duration-200 py-1 focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
+                className="hover:text-white transition-colors duration-200 py-2.5 px-2 inline-flex items-center min-h-[44px] focus-visible:outline-2 focus-visible:outline-[#3b82f6] rounded-xs"
               >
                 Contact
               </a>
@@ -108,14 +108,14 @@ export default function HeaderNav() {
               </div>
 
               {/* Quick Social Links with WCAG 44px touch targets */}
-              <div className="flex items-center gap-1.5 border-l border-[#1c1d24] pl-3">
+              <div className="flex items-center gap-2 border-l border-[#1c1d24] pl-3">
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   href={personalInfo.socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-sm bg-[#111216] border border-[#282a35] hover:border-white text-[#cbd5e1] hover:text-white flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-sm bg-[#111216] border border-[#282a35] hover:border-white text-[#cbd5e1] hover:text-white flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
                   title="GitHub"
                   aria-label="GitHub Profile"
                 >
@@ -127,7 +127,7 @@ export default function HeaderNav() {
                   href={personalInfo.socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#38bdf8] text-[#cbd5e1] hover:text-[#38bdf8] flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-sm bg-[#111216] border border-[#282a35] hover:border-[#38bdf8] text-[#cbd5e1] hover:text-[#38bdf8] flex items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
                   title="LinkedIn"
                   aria-label="LinkedIn Profile"
                 >
@@ -143,7 +143,7 @@ export default function HeaderNav() {
                 download="Hassan-Abbas-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#282a35] hover:border-[#3b82f6] text-[11px] uppercase tracking-wider font-mono text-[#cbd5e1] hover:text-[#3b82f6] transition-all rounded-sm bg-[#111216] hover:bg-[#17181f] focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 min-h-[40px] border border-[#282a35] hover:border-[#3b82f6] text-[11px] uppercase tracking-wider font-mono text-[#cbd5e1] hover:text-[#3b82f6] transition-all rounded-sm bg-[#111216] hover:bg-[#17181f] focus-visible:outline-2 focus-visible:outline-[#3b82f6]"
                 aria-label="Download Hassan Abbas Curriculum Vitae PDF"
               >
                 <FileDown className="w-3.5 h-3.5 text-[#3b82f6]" />

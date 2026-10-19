@@ -1,11 +1,40 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import HeaderNav from "@/components/HeaderNav";
 import HeroSection from "@/components/HeroSection";
 import AboutAndServices from "@/components/AboutAndServices";
-import ProjectsSection from "@/components/ProjectsSection";
-import ProcessAndExperience from "@/components/ProcessAndExperience";
-import FooterSection from "@/components/FooterSection";
 import { ScrollProgressBar } from "@/components/ScrollAnimations";
+
+// Dynamically split below-the-fold sections to trim initial JS bundle and avoid main-thread blocking
+const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"), {
+  loading: () => (
+    <div className="w-full min-h-[400px] border-b border-[#1c1d24] bg-[#070707] flex items-center justify-center">
+      <span className="text-xs font-mono text-[#94a3b8] uppercase tracking-widest animate-pulse">
+        Loading Projects...
+      </span>
+    </div>
+  ),
+});
+
+const ProcessAndExperience = dynamic(() => import("@/components/ProcessAndExperience"), {
+  loading: () => (
+    <div className="w-full min-h-[300px] border-b border-[#1c1d24] bg-[#070707] flex items-center justify-center">
+      <span className="text-xs font-mono text-[#94a3b8] uppercase tracking-widest animate-pulse">
+        Loading Experience & Stack...
+      </span>
+    </div>
+  ),
+});
+
+const FooterSection = dynamic(() => import("@/components/FooterSection"), {
+  loading: () => (
+    <div className="w-full min-h-[300px] bg-[#050507] border-t border-[#1c1d24] flex items-center justify-center">
+      <span className="text-xs font-mono text-[#94a3b8] uppercase tracking-widest animate-pulse">
+        Loading Contact...
+      </span>
+    </div>
+  ),
+});
 
 export default function Home() {
   return (
