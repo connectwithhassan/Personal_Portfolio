@@ -5,6 +5,10 @@ export interface Project {
   tag: string;
   category: string;
   tagline?: string;
+  role: string;
+  problem: string;
+  solution: string;
+  myContribution: string;
   description: string;
   technologies: string[];
   highlights?: string[];
@@ -19,6 +23,7 @@ export interface ExperienceItem {
   role: string;
   company: string;
   period: string;
+  type?: string;
   bullets: string[];
 }
 
@@ -26,13 +31,14 @@ export interface EducationItem {
   degree: string;
   institution: string;
   period: string;
+  statusNote?: string;
 }
 
 export const personalInfo = {
   name: "S.M HASSAN ABBAS",
   shortName: "HASSAN",
   monogram: "HA",
-  title: "FULL STACK DEVELOPER & PROJECT MANAGER",
+  title: "TECHNICAL PROJECT MANAGER & FULL-STACK DEVELOPER",
   subTitle: "Technical Project Manager & Full-Stack Developer",
   location: "Karachi, Pakistan",
   email: "connect.hassanabbas@gmail.com",
@@ -41,15 +47,15 @@ export const personalInfo = {
   status: "AVAILABLE FOR FREELANCE & FULL-TIME",
   copyrightYear: "2026",
   heroBio:
-    "Technical Project Manager & Full-Stack Developer experienced in translating business requirements into high-performance software. Combines hands-on full-stack development with strong team leadership, sprint planning, and on-time delivery.",
+    "Technical Project Manager & Full-Stack Developer experienced in translating business requirements into high-performance software. Combines hands-on full-stack development across Next.js, Fastify, and Python with disciplined agile sprint planning and milestone delivery.",
   aboutHeading: "Lead with vision. Code with precision.",
   aboutText:
-    "I am a Technical Project Manager & Full-Stack Developer with proven experience architecting scalable systems using Next.js, Node.js, Fastify, and Python/Django. I bridge business strategy with engineering excellence to deliver robust, high-throughput digital products.",
+    "I am a Technical Project Manager & Full-Stack Developer with proven experience architecting scalable systems using Next.js, Node.js, Fastify, and Python/Django. I bridge business strategy with engineering execution to deliver robust, high-throughput digital products.",
   metrics: {
-    experienceYears: "4+",
-    projectsCompleted: "28+",
-    clientSatisfaction: "100%",
-    agileSprints: "50+",
+    experienceYears: "3+",
+    projectsCompleted: "25+",
+    sprintDelivery: "98%",
+    agileSprints: "40+",
   },
   socialLinks: {
     email: "mailto:connect.hassanabbas@gmail.com",
@@ -69,7 +75,7 @@ export const skillsList = [
   { name: "Python & Django", category: "backend" },
   { name: "PostgreSQL & MongoDB", category: "database" },
   { name: "AI & RAG Integration", category: "ai" },
-  { name: "Agile Project Management", category: "management" },
+  { name: "Agile Sprint Planning", category: "management" },
   { name: "Client Communication", category: "management" },
   { name: "Git & Docker", category: "devops" },
 ];
@@ -78,7 +84,7 @@ export const services = [
   {
     icon: "Monitor",
     title: "FULL STACK ARCHITECTURE",
-    description: "End-to-end web applications with Next.js, React, and modular clean architectures.",
+    description: "End-to-end web applications with Next.js, React, and modular clean component design.",
   },
   {
     icon: "Code2",
@@ -88,12 +94,12 @@ export const services = [
   {
     icon: "Cpu",
     title: "AI & RAG INTEGRATION",
-    description: "Intelligent agentic systems, vector databases, document retrieval & LLM workflows.",
+    description: "Intelligent agentic workflows, vector search, document retrieval & LLM pipeline chains.",
   },
   {
     icon: "Kanban",
     title: "TECHNICAL PROJECT MANAGEMENT",
-    description: "Sprint planning, stakeholder alignment, milestone execution & agile team leadership.",
+    description: "Sprint planning, stakeholder demos, milestone tracking & engineering team alignment.",
   },
 ];
 
@@ -130,16 +136,18 @@ export const experienceList: ExperienceItem[] = [
     role: "PROJECT MANAGER",
     company: "Techmire Solutions",
     period: "AUG 2026 - PRESENT",
+    type: "Current Role",
     bullets: [
-      "Managed direct client communications, translating business needs into detailed technical scopes, timelines, and deliverables.",
-      "Led end-to-end agile delivery lifecycles, driving sprint planning, milestone reviews, and on-time project releases.",
-      "Aligned client expectations with engineering teams, providing regular demos, managing scope adjustments, and resolving technical blockers.",
+      "Manage direct client communications, translating business needs into detailed technical scopes, timelines, and deliverables.",
+      "Lead end-to-end agile delivery lifecycles, driving sprint planning, milestone reviews, and on-time project releases.",
+      "Align client expectations with engineering teams, providing regular demos, managing scope adjustments, and resolving technical blockers.",
     ],
   },
   {
     role: "LEAD FULL STACK DEVELOPER",
     company: "Techmire Solutions",
     period: "JUN 2025 - AUG 2026",
+    type: "Full-Time Engineering",
     bullets: [
       "Architected scalable web applications using Next.js, Node.js, and high-performance Fastify backends.",
       "Led development teams through full agile lifecycles, driving code reviews, system design, and technical standards.",
@@ -150,6 +158,7 @@ export const experienceList: ExperienceItem[] = [
     role: "FULL STACK INTERN",
     company: "Techmire Solutions",
     period: "AUG 2024 - MAY 2025",
+    type: "Internship",
     bullets: [
       "Built responsive frontend interfaces using React/Next.js and integrated backend services with Node.js/Django.",
       "Developed RESTful APIs and managed database queries across PostgreSQL and MongoDB.",
@@ -163,16 +172,19 @@ export const educationList: EducationItem[] = [
     degree: "B.SC SOFTWARE ENGINEERING",
     institution: "SIR SYED UNIVERSITY",
     period: "2022 - 2026",
+    statusNote: "Degree in Progress / Final Year",
   },
   {
-    degree: "INTERMEDIATE",
+    degree: "INTERMEDIATE (PRE-ENGINEERING)",
     institution: "Govt. College For Men",
     period: "2020 - 2022",
+    statusNote: "Higher Secondary Certificate",
   },
   {
-    degree: "MATRICULATION",
+    degree: "MATRICULATION (COMPUTER SCIENCE)",
     institution: "S.M Public Academy",
     period: "2019 - 2020",
+    statusNote: "Secondary School Certificate",
   },
 ];
 
@@ -184,18 +196,24 @@ export const projectsData: Project[] = [
     tag: "EDTECH & AI ASSESSMENT",
     category: "NEXT.JS / SANITY CMS / LLM APIS",
     tagline: "Intelligent Automated Assessment & Learning Engine",
+    role: "Full-Stack Developer & AI Pipeline Architect",
+    problem:
+      "Educational institutions face significant grading delays and rigid curriculum structures that cannot dynamically adapt to students' varying comprehension levels.",
+    solution:
+      "Engineered an automated EdTech platform integrating Next.js App Router with Sanity CMS for dynamic course authoring and LLM prompt chaining for rapid, consistent assignment evaluation.",
+    myContribution:
+      "Architected the Next.js frontend, integrated Sanity CMS content schemas, designed API evaluation endpoints with prompt chaining, and built the performance analytics dashboard.",
     description:
       "A high-performance EdTech platform integrating Next.js with Sanity CMS for dynamic, structured content management. Features intelligent automated assessment generation, automated study workflows, and real-time performance analytics that make the learning and grading process seamless.",
     technologies: ["Next.js", "Sanity CMS", "Node.js", "LLM APIs", "TypeScript", "Tailwind CSS"],
     highlights: [
-      "Dynamic content management via Sanity CMS with real-time editorial updates.",
-      "Automated evaluation workflows with LLM API prompt chaining.",
-      "Performance-tuned Next.js App Router frontend with sub-second page transitions.",
+      "Dynamic Content Management: Sanity CMS integration enables educators to create and publish structured assessment modules without engineering intervention.",
+      "Automated Evaluation Workflow: Prompt-chained LLM APIs parse and evaluate student submissions against rubrics in seconds.",
+      "Real-Time Analytics Dashboard: Instant grade visualization and performance metrics for both instructors and learners.",
+      "Performance-Tuned Frontend: Next.js App Router implementation delivering sub-second page transitions and responsive test-taking UX.",
     ],
     image: "/gradewise-ai.png",
     logo: "/gradewise-ai.png",
-    link: "#",
-    github: "#",
     featured: true,
   },
   {
@@ -205,19 +223,24 @@ export const projectsData: Project[] = [
     tag: "ORGANIC E-COMMERCE & FARM-TO-TABLE",
     category: "NEXT.JS / E-COMMERCE / WHATSAPP API",
     tagline: "Modern Farm-to-Table Organic Kitchen Essentials Platform",
+    role: "Frontend Architect & WhatsApp Commerce Integration",
+    problem:
+      "A farm-to-table organic brand required a frictionless direct-to-consumer store that established brand trust without forcing customers through complex multi-step checkouts.",
+    solution:
+      "Developed a clean, aesthetic Next.js storefront featuring transparent product sourcing, dynamic weight selection (5KG/10KG), and a direct WhatsApp order dispatch mechanism.",
+    myContribution:
+      "Designed the responsive UI, implemented client-side weight/packaging selectors, and engineered the automated WhatsApp order string generator for 1-click mobile purchasing.",
     description:
       "Terra Pure Foods is a modern, farm-to-table e-commerce platform designed to showcase and sell 100% organic, unprocessed kitchen essentials (such as stone-ground Chakki Atta, cold-pressed Mustard Oil, and Basmati Rice). The web application focuses on clean aesthetics, user trust, and a frictionless shopping experience with dynamic packaging options and direct WhatsApp ordering.",
     technologies: ["Next.js", "React", "Tailwind CSS", "WhatsApp Business API", "Responsive UX", "TypeScript"],
     highlights: [
-      "Dynamic Product Catalog: Categorized pages for staple items with detailed pricing, packaging options (5KG/10KG), and customer reviews.",
-      "Interactive UI & Branding: Earthy, minimalist design built with Tailwind CSS, custom typography, and responsive layouts tailored for conscious consumers.",
-      "Direct Order & WhatsApp Integration: Seamless communication channels allowing users to place quick inquiries and direct phone/WhatsApp orders.",
-      "High-Performance Architecture: Built with Next.js for optimized server-side rendering, fast page loads, and smooth mobile-first navigation.",
+      "Dynamic Product Catalog: Categorized product pages with nutritional data, customer reviews, and weight variant selectors (5KG/10KG).",
+      "Direct WhatsApp Ordering: Custom deep-link handler pre-fills order details, items, and address directly into WhatsApp for quick checkout.",
+      "Organic Visual Aesthetic: Earthy dark palette, custom typography, and responsive grid layouts tailored for health-conscious shoppers.",
+      "Server-Side Optimization: Fast page loads and SEO optimization powered by Next.js server components.",
     ],
     image: "/terrapure-01.webp",
     logo: "/terrapure-01.webp",
-    link: "#",
-    github: "#",
     featured: true,
   },
   {
@@ -227,21 +250,24 @@ export const projectsData: Project[] = [
     tag: "E-COMMERCE & CUSTOM ADMIN PANEL",
     category: "NEXT.JS / NODE.JS / CUSTOM BACKEND",
     tagline: "Modern E-Commerce Store with Custom Node.js Admin Control Panel",
+    role: "Lead Full-Stack Developer & Admin Panel Architect",
+    problem:
+      "Growing e-commerce operations required unified inventory management, live stock alerts, and customer order processing without relying on expensive monthly SaaS plugins.",
+    solution:
+      "Engineered an end-to-end custom e-commerce solution pairing a high-speed Next.js customer frontend with a high-throughput Node.js backend and proprietary administrative control dashboard.",
+    myContribution:
+      "Architected backend RESTful API endpoints, designed PostgreSQL/MongoDB database models, developed the administrative dashboard, and optimized frontend catalog rendering.",
     description:
       "Tawakkal Store is an end-to-end modern e-commerce web platform engineered with a high-performance Node.js backend and a dedicated custom admin control panel that manages the entire website operations—including real-time inventory, order tracking, product catalogs, and customer data with high core web vitals.",
     technologies: ["Next.js", "Node.js", "Custom Admin Panel", "Tailwind CSS", "REST APIs", "State Management"],
     highlights: [
-      "Custom Backend Admin Panel: Centralized control dashboard to manage entire website operations, catalog inventory, orders, and customer data in real time.",
-      "Robust Node.js Backend: High-throughput server architecture with scalable RESTful API endpoints and secure transaction handling.",
-      "Interactive Product Catalog: Structured category navigation, search, and dynamic attribute filtering for effortless browsing.",
-      "State Management & Cart: Smooth cart workflows, instant stock availability updates, and lightweight state handling.",
-      "Optimized Checkout & Order Flow: Streamlined user journey with secure checkout forms, shipping calculators, and direct order communication channels.",
-      "High-Speed Rendering: Powered by modern frontend tooling to ensure rapid page load speeds, high core web vitals, and clean responsive design.",
+      "Custom Admin Control Panel: Centralized dashboard for non-technical staff to update product inventory, track orders, and view daily sales.",
+      "High-Throughput Node.js API: RESTful endpoints with validation guards and connection pooling for concurrent traffic spikes.",
+      "Dynamic Catalog Filtering: Category drill-downs, instantaneous price/stock updates, and lightweight cart state management.",
+      "Core Web Vitals Optimization: Sub-second initial contentful paint with optimized asset delivery and responsive layouts.",
     ],
     image: "/tawakkal-logo.webp",
     logo: "/tawakkal-logo.webp",
-    link: "#",
-    github: "#",
     featured: true,
   },
 ];

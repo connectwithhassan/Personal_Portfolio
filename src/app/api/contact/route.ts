@@ -47,7 +47,7 @@ export async function POST(req: Request) {
 
     const rawOrigin = req.headers.get("origin") || "";
     const origin = !rawOrigin || rawOrigin.includes("localhost")
-      ? "https://connectwithhassan.vercel.app"
+      ? "https://personal-portfolio-zzhk.vercel.app"
       : rawOrigin;
     const referer = `${origin}/`;
 

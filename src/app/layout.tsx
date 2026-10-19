@@ -21,7 +21,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://connectwithhassan.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://personal-portfolio-zzhk.vercel.app";
 
 export const viewport: Viewport = {
   themeColor: "#070707",

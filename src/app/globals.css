@@ -5,30 +5,45 @@
   --font-space: var(--font-space), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   
-  /* Brand & Design Tokens (Dark OLED System) */
+  /* Brand & Design Tokens (Executive Engineer OLED System) */
   --color-primary: #1e293b;
   --color-accent: #2563eb;
   --color-accent-hover: #3b82f6;
   --color-accent-glow: rgba(37, 99, 235, 0.25);
   
+  /* Canvas & Surface Tokens */
   --color-dark-bg: #070707;
-  --color-dark-surface: #0d0d0d;
-  --color-dark-surface-hover: #121212;
-  --color-dark-border: #1a1a1a;
-  --color-dark-border-subtle: #141414;
-  --color-dark-border-hover: #262626;
+  --color-dark-surface: #0c0c0e;
+  --color-dark-surface-hover: #121318;
+  --color-dark-border: #1a1a1f;
+  --color-dark-border-subtle: #141418;
+  --color-dark-border-hover: #262832;
 
-  --color-text-primary: #ededed;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #737373;
-  --color-text-dim: #52525b;
+  --color-bg-canvas: #070707;
+  --color-surface-subtle: #0c0c0e;
+  --color-surface-card: #111216;
+  --color-surface-elevated: #17181f;
+  
+  --color-border-subtle: #1c1d24;
+  --color-border-strong: #282a35;
+  --color-border-focus: #3b82f6;
+
+  /* Typography / Accessible Contrast System (WCAG 2.2 AA & AAA) */
+  --color-text-primary: #f9fafb;      /* > 16:1 against #070707 */
+  --color-text-secondary: #cbd5e1;    /* > 10:1 against #070707 */
+  --color-text-muted: #94a3b8;        /* > 5.5:1 against #070707 */
+  --color-text-dim: #64748b;          /* Purely decorative labels */
+
+  /* Status Colors */
+  --color-status-success: #10b981;
+  --color-status-error: #ef4444;
 }
 
 :root {
   --bg-color: #070707;
-  --border-color: #1a1a1a;
+  --border-color: #1a1a1f;
   --accent-blue: #2563eb;
-  --focus-ring: #2563eb;
+  --focus-ring: #3b82f6;
 }
 
 html {
@@ -37,7 +52,7 @@ html {
 
 body {
   background-color: #070707;
-  color: #ededed;
+  color: #f9fafb;
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -54,9 +69,13 @@ body {
   font-family: var(--font-space), sans-serif;
 }
 
-/* Headings with resilient layout */
+/* Headings with resilient, balanced layout */
 h1, h2, h3, h4 {
   text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Custom subtle scrollbar */
@@ -70,12 +89,12 @@ h1, h2, h3, h4 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #242630;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #3b82f6;
 }
 
 /* Accessible focus ring helper */
@@ -83,7 +102,7 @@ h1, h2, h3, h4 {
   outline: none;
 }
 .focus-ring:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
@@ -98,10 +117,66 @@ h1, h2, h3, h4 {
 
 /* Subtle grid line utility */
 .border-grid {
-  border-color: #181818;
+  border-color: #1a1a1f;
 }
 
-/* Respect user's motion preference */
+/* Component Foundations */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-family: var(--font-space), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  transition: all 180ms ease-out;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.4);
+}
+.btn-primary:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #111216;
+  color: #cbd5e1;
+  font-family: var(--font-space), monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  border: 1px solid #282a35;
+  transition: all 180ms ease-out;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.08);
+}
+.btn-secondary:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Respect user's motion preference (WCAG 2.2 2.3.3) */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
