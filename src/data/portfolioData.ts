@@ -194,20 +194,20 @@ export const projectsData: Project[] = [
     number: "01",
     title: "GRADEWISE AI",
     tag: "EDTECH & AI ASSESSMENT",
-    category: "NEXT.JS / SANITY CMS / LLM APIS",
+    category: "NEXT.JS / FASTIFY / LLM APIS",
     tagline: "Intelligent Automated Assessment & Learning Engine",
     role: "Full-Stack Developer & AI Pipeline Architect",
     problem:
       "Educational institutions face significant grading delays and rigid curriculum structures that cannot dynamically adapt to students' varying comprehension levels.",
     solution:
-      "Engineered an automated EdTech platform integrating Next.js App Router with Sanity CMS for dynamic course authoring and LLM prompt chaining for rapid, consistent assignment evaluation.",
+      "Engineered an automated EdTech platform integrating Next.js App Router with an ultra-fast Fastify backend microservice architecture and LLM prompt chaining for rapid, consistent assignment evaluation.",
     myContribution:
-      "Architected the Next.js frontend, integrated Sanity CMS content schemas, designed API evaluation endpoints with prompt chaining, and built the performance analytics dashboard.",
+      "Architected the Next.js frontend, engineered high-throughput Fastify REST APIs and schema validation, designed evaluation endpoints with prompt chaining, and built the real-time performance analytics dashboard.",
     description:
-      "A high-performance EdTech platform integrating Next.js with Sanity CMS for dynamic, structured content management. Features intelligent automated assessment generation, automated study workflows, and real-time performance analytics that make the learning and grading process seamless.",
-    technologies: ["Next.js", "Sanity CMS", "Node.js", "LLM APIs", "TypeScript", "Tailwind CSS"],
+      "A high-performance EdTech platform integrating Next.js with a Fastify backend for low-latency, scalable evaluation processing. Features intelligent automated assessment generation, automated study workflows, and real-time performance analytics that make the learning and grading process seamless.",
+    technologies: ["Next.js", "Fastify", "Node.js", "LLM APIs", "TypeScript", "Tailwind CSS"],
     highlights: [
-      "Dynamic Content Management: Sanity CMS integration enables educators to create and publish structured assessment modules without engineering intervention.",
+      "Ultra-Fast Backend: Fastify microservices deliver low-overhead, high-throughput API endpoints for high-concurrency evaluation workloads.",
       "Automated Evaluation Workflow: Prompt-chained LLM APIs parse and evaluate student submissions against rubrics in seconds.",
       "Real-Time Analytics Dashboard: Instant grade visualization and performance metrics for both instructors and learners.",
       "Performance-Tuned Frontend: Next.js App Router implementation delivering sub-second page transitions and responsive test-taking UX.",
