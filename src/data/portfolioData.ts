@@ -212,8 +212,8 @@ export const projectsData: Project[] = [
       "Real-Time Analytics Dashboard: Instant grade visualization and performance metrics for both instructors and learners.",
       "Performance-Tuned Frontend: Next.js App Router implementation delivering sub-second page transitions and responsive test-taking UX.",
     ],
-    image: "/gradewise-ai.png",
-    logo: "/gradewise-ai.png",
+    image: "/gradewise-ai.webp",
+    logo: "/gradewise-ai.webp",
     featured: true,
   },
   {

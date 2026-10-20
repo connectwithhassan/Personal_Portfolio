@@ -7,18 +7,27 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["Arial", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["Arial", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["Arial", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://personal-portfolio-zzhk.vercel.app";
@@ -66,7 +75,7 @@ export const metadata: Metadata = {
     siteName: "S.M Hassan Abbas Portfolio",
     images: [
       {
-        url: "/profile-nobg.png",
+        url: "/profile-nobg.webp",
         width: 1200,
         height: 630,
         alt: "S.M Hassan Abbas - Full Stack Developer & Project Manager",
@@ -78,7 +87,7 @@ export const metadata: Metadata = {
     title: "S.M HASSAN ABBAS | Full Stack Developer & Project Manager",
     description:
       "Technical Project Manager & Full-Stack Developer specializing in Next.js, Node.js, Fastify, AI/RAG integrations, and scalable software architectures.",
-    images: ["/profile-nobg.png"],
+    images: ["/profile-nobg.webp"],
   },
   robots: {
     index: true,

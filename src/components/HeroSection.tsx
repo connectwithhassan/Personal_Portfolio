@@ -71,10 +71,11 @@ export default function HeroSection() {
           >
             <div className="relative w-full h-full flex items-end justify-center">
               <Image
-                src="/profile-nobg.png"
+                src="/profile-nobg.webp"
                 alt="S.M Hassan Abbas - Technical Project Manager & Full-Stack Developer"
                 fill
                 priority
+                fetchPriority="high"
                 className="object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
                 sizes="(max-width: 640px) 300px, (max-width: 1024px) 480px, 640px"
               />

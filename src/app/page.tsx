@@ -3,9 +3,11 @@ import dynamic from "next/dynamic";
 import HeaderNav from "@/components/HeaderNav";
 import HeroSection from "@/components/HeroSection";
 import AboutAndServices from "@/components/AboutAndServices";
-import { ScrollProgressBar } from "@/components/ScrollAnimations";
+// Dynamically load below-the-fold & non-critical interactive components
+const ScrollProgressBar = dynamic(
+  () => import("@/components/ScrollAnimations").then((mod) => mod.ScrollProgressBar)
+);
 
-// Dynamically split below-the-fold sections to trim initial JS bundle and avoid main-thread blocking
 const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"), {
   loading: () => (
     <div className="w-full min-h-[400px] border-b border-[#1c1d24] bg-[#070707] flex items-center justify-center">

@@ -183,11 +183,11 @@ export default function FooterSection() {
               >
                 <div className="w-44 h-44 sm:w-48 sm:h-48 mx-auto bg-[#0a0b0e] p-2 rounded-xs flex items-center justify-center border border-[#1c1d24]">
                   <Image
-                    src="/qr-whatsapp-blue.png"
+                    src="/qr-whatsapp-blue.webp"
                     alt="WhatsApp QR Code - Scan to chat with Hassan (+92 336 0817934)"
                     width={192}
                     height={192}
-                    priority
+                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
                 </div>
